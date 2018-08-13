@@ -107,7 +107,8 @@ _compile_bash_installation_prog() {
 
 _compile_bash_program_prog() {	
 	export includeScriptList
-	true
+	
+	includeScriptList+=( vehicles.sh )
 }
 
 _compile_bash_config_prog() {	

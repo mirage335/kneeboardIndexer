@@ -2,13 +2,16 @@ Copyright (C) 2018 m335
 See the end of the file for license conditions.
 See license.txt for kneeboardIndexer license conditions.
 
+Kneeboard group indexing and construction tool for DCS World.
+
 # Usage
+
+Use a voice command like "kneeboard 10 forward" to skip kneeboard chapters.
 
 
 # Design
 
-
-# Safety
+Source files, including PDF, are separated into groups by script. See "core.sh" and "vehicles.sh" . These groups are padded with blank pages to multiples of ten.
 
 
 __Copyright__
