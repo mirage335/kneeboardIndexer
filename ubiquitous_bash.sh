@@ -9990,7 +9990,9 @@ _dup_fa18c() {
 	local guideExport
 	guideExport="$1"
 	
-	true
+	_na "$guideExport"/01-entry-na
+	_na "$guideExport"/30-util-na
+	_na "$guideExport"/40-tooling-na
 }
 
 _checks_fa18c_sequence() {
@@ -10118,7 +10120,7 @@ _guide_fa18c() {
 	#Most FA-18 kneeboard assembly is done manually.
 	
 	_pad_directory "$fa18c"/00-interface
-	_pad_directory "$fa18c"/01-entry
+	#_pad_directory "$fa18c"/01-entry
 	_pad_directory "$fa18c"/02-immediate
 	_pad_directory "$fa18c"/03-hotas
 	_pad_directory "$fa18c"/04-irregular
@@ -10126,11 +10128,11 @@ _guide_fa18c() {
 	_pad_directory "$fa18c"/20-preflight
 	_pad_directory "$fa18c"/21-landing
 	_pad_directory "$fa18c"/24-landing-ifr
-	_pad_directory "$fa18c"/30-util
+	#_pad_directory "$fa18c"/30-util
 	_pad_directory "$fa18c"/31-nav
 	_pad_directory "$fa18c"/32-comm
 	_pad_directory "$fa18c"/33-autopilot
-	_pad_directory "$fa18c"/40-tooling
+	#_pad_directory "$fa18c"/40-tooling
 	_pad_directory "$fa18c"/41-management
 	_pad_directory "$fa18c"/42-sensors
 	_pad_directory "$fa18c"/43-rwr
