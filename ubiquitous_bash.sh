@@ -10041,12 +10041,15 @@ _guide_f5e() {
 	_f5e 03-hotas-dup 024
 	_f5e 03-hotas-dup 034
 	_f5e 03-hotas-dup 039
+	_rename 'checks-' '03-checks-' "$f5e"'/03-hotas-dup/checks-'*'.png'
 	_pad_directory "$f5e"/03-hotas-dup
 	
 	_f5e 04-irregular-dup 038
+	_rename 'checks-' '04-checks-' "$f5e"'/04-irregular-dup/checks-'*'.png'
 	_pad_directory "$f5e"/04-irregular-dup
 	
 	cp "$f5e"/99-checks/checks-{008..023}.png "$f5e"/05-controls-dup
+	_rename 'checks-' '05-checks-' "$f5e"'/05-controls-dup/checks-'*'.png'
 	_pad_directory "$f5e"/05-controls-dup
 	
 	#cp "$f5e"/02-immediate/*checks-*.png "$f5e"/01-entry/
@@ -10119,7 +10122,6 @@ _guide_fa18c() {
 	
 	#Most FA-18 kneeboard assembly is done manually.
 	
-	_pad_directory "$fa18c"/00-interface
 	#_pad_directory "$fa18c"/01-entry
 	_pad_directory "$fa18c"/02-immediate
 	_pad_directory "$fa18c"/03-hotas
