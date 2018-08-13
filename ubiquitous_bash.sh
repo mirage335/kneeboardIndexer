@@ -10109,11 +10109,33 @@ _guide_f5e() {
 }
 
 _guide_fa18c() {
-	_guide_directories "$fa18c"
-	_dup_fa18c "$fa18c"
+	#_guide_directories "$fa18c"
+	#_dup_fa18c "$fa18c"
 	
 	#Interface reference NEVER padded.
 	cp "$scriptLib"/interface/fa18c/* "$fa18c"/00-interface
+	
+	#Most FA-18 kneeboard assembly is done manually.
+	
+	_pad_directory "$fa18c"/00-interface
+	_pad_directory "$fa18c"/01-entry
+	_pad_directory "$fa18c"/02-immediate
+	_pad_directory "$fa18c"/03-hotas
+	_pad_directory "$fa18c"/04-irregular
+	_pad_directory "$fa18c"/05-controls
+	_pad_directory "$fa18c"/20-preflight
+	_pad_directory "$fa18c"/21-landing
+	_pad_directory "$fa18c"/24-landing-ifr
+	_pad_directory "$fa18c"/30-util
+	_pad_directory "$fa18c"/31-nav
+	_pad_directory "$fa18c"/32-comm
+	_pad_directory "$fa18c"/33-autopilot
+	_pad_directory "$fa18c"/40-tooling
+	_pad_directory "$fa18c"/41-management
+	_pad_directory "$fa18c"/42-sensors
+	_pad_directory "$fa18c"/43-rwr
+	_pad_directory "$fa18c"/50-weapons
+	_pad_directory "$fa18c"/60-countermeasures
 }
 
 _guide() {
