@@ -29,7 +29,7 @@ _convert_pdf() {
 	
 	rm "$2"/*.png > /dev/null 2>&1
 	convert -density "$pdfDensity" "$1" -gamma 1.6 "$2"/"$imageName"-%03d.png
-	mogrify -strip -taint -compress Lossless "$2"/"$imageName"-%03d.png
+	mogrify -strip -taint -compress Lossless "$2"/"$imageName"-*.png
 }
 
 _makeblank() {

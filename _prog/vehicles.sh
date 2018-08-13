@@ -46,7 +46,7 @@ _dup_f5e() {
 _checks_f5e_sequence() {
 	_start
 	
-	_guide_directory "$guideExport"/99-checks
+	_guide_directory "$f5e"/99-checks
 	
 	#_guide_directories "$f5e"
 	#_dup_f5e "$f5e"
@@ -70,7 +70,7 @@ _dup_fa18c() {
 _checks_fa18c_sequence() {
 	_start
 	
-	_guide_directory "$guideExport"/99-checks
+	_guide_directory "$fa18c"/99-checks
 	
 	#_guide_directories "$fa18c"
 	#_dup_fa18c "$fa18c"
@@ -185,6 +185,9 @@ _guide_f5e() {
 _guide_fa18c() {
 	_guide_directories "$fa18c"
 	_dup_fa18c "$fa18c"
+	
+	#Interface reference NEVER padded.
+	cp "$scriptLib"/interface/fa18c/* "$fa18c"/00-interface
 }
 
 _guide() {
