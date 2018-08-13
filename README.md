@@ -2,7 +2,7 @@ Copyright (C) 2018 m335
 See the end of the file for license conditions.
 See license.txt for kneeboardIndexer license conditions.
 
-Kneeboard group indexing and construction tool for DCS World.
+Kneeboard group indexing and construction tool for DCS World. See "_export" for binary images.
 
 # Usage
 
