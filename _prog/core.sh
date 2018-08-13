@@ -29,10 +29,13 @@ _convert_pdf() {
 	
 	rm "$2"/*.png > /dev/null 2>&1
 	convert -density "$pdfDensity" "$1" -gamma 1.6 "$2"/"$imageName"-%03d.png
+	mogrify -strip -taint -compress Lossless "$2"/"$imageName"-%03d.png
 }
 
 _makeblank() {
 	convert -size "$width"x"$height" xc:black "$1"
+	mogrify -strip -taint -compress Lossless "$1"
+	#exiftool -all= "$1"
 }
 
 _pad_directory() {

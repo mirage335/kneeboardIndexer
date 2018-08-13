@@ -48,8 +48,8 @@ _checks_f5e_sequence() {
 	
 	_guide_directory "$guideExport"/99-checks
 	
-	_guide_directories "$f5e"
-	_dup_f5e "$f5e"
+	#_guide_directories "$f5e"
+	#_dup_f5e "$f5e"
 	
 	_convert_pdf "$scriptLib"/Chucks_Guides/f5e.pdf "$f5e"/99-checks checks "$chucks_guides_density"
 	
@@ -72,8 +72,8 @@ _checks_fa18c_sequence() {
 	
 	_guide_directory "$guideExport"/99-checks
 	
-	_guide_directories "$fa18c"
-	_dup_f5e "$fa18c"
+	#_guide_directories "$fa18c"
+	#_dup_fa18c "$fa18c"
 	
 	_convert_pdf "$scriptLib"/Chucks_Guides/fa18c.pdf "$fa18c"/99-checks checks "$chucks_guides_density"
 	
@@ -183,7 +183,8 @@ _guide_f5e() {
 }
 
 _guide_fa18c() {
-	true
+	_guide_directories "$fa18c"
+	_dup_fa18c "$fa18c"
 }
 
 _guide() {

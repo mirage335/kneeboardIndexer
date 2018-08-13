@@ -9794,6 +9794,8 @@ _package() {
 
 _test_prog() {
 	_getDep convert
+	_getdep mogrify
+	#_getDep exiftool
 }
 
 ##### Core
@@ -9827,10 +9829,13 @@ _convert_pdf() {
 	
 	rm "$2"/*.png > /dev/null 2>&1
 	convert -density "$pdfDensity" "$1" -gamma 1.6 "$2"/"$imageName"-%03d.png
+	mogrify -strip -taint -compress Lossless "$2"/"$imageName"-%03d.png
 }
 
 _makeblank() {
 	convert -size "$width"x"$height" xc:black "$1"
+	mogrify -strip -taint -compress Lossless "$1"
+	#exiftool -all= "$1"
 }
 
 _pad_directory() {
@@ -9969,8 +9974,8 @@ _checks_f5e_sequence() {
 	
 	_guide_directory "$guideExport"/99-checks
 	
-	_guide_directories "$f5e"
-	_dup_f5e "$f5e"
+	#_guide_directories "$f5e"
+	#_dup_f5e "$f5e"
 	
 	_convert_pdf "$scriptLib"/Chucks_Guides/f5e.pdf "$f5e"/99-checks checks "$chucks_guides_density"
 	
@@ -9993,8 +9998,8 @@ _checks_fa18c_sequence() {
 	
 	_guide_directory "$guideExport"/99-checks
 	
-	_guide_directories "$fa18c"
-	_dup_f5e "$fa18c"
+	#_guide_directories "$fa18c"
+	#_dup_fa18c "$fa18c"
 	
 	_convert_pdf "$scriptLib"/Chucks_Guides/fa18c.pdf "$fa18c"/99-checks checks "$chucks_guides_density"
 	
@@ -10101,12 +10106,11 @@ _guide_f5e() {
 	
 	_f5e 60-countermeasures 058
 	_pad_directory "$f5e"/60-countermeasures
-	
-	
 }
 
 _guide_fa18c() {
-	true
+	_guide_directories "$fa18c"
+	_dup_fa18c "$fa18c"
 }
 
 _guide() {
