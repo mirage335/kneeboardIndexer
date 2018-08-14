@@ -10147,6 +10147,19 @@ _guide() {
 	_guide_fa18c "$@"
 }
 
+_lite_fa18c() {
+	cp -r "$fa18c" "$fa18c"-lite
+	find "$fa18c"-lite -name '*.png' -type f -exec mogrify -resize 960x540 {} \;
+	
+	#Untested.
+	#https://www.linuxquestions.org/questions/linux-desktop-74/how-to-get-mogrify-to-use-multiple-instances-853627/
+	#find "$fa18c"-lite -name '*.png' -type f -print | xargs -n 48 -P 48 mogrify -resize 960x540 `cat -`
+}
+
+_lite() {
+	_lite_fa18c "$@"
+}
+
 #matchingReversePorts=""
 #matchingEMBEDDED=""
 
