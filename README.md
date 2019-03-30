@@ -4,6 +4,13 @@ See license.txt for kneeboardIndexer license conditions.
 
 Kneeboard group indexing and construction tool for DCS World. See "_export" for binary images.
 
+# OBSOLETE
+
+No longer maintained or expected to be useful for DCS World, due to improvments in VR software. Specifically, Oculus Dash overlays, as well as the general superiority of OpenVR, Vive, Pimax, and similar, render this toolchain unnecessary.
+
+However, the codebase does remain a good example for a process to convert large PDF files into chapters at intervals of ten PNG files each.
+
+
 # Usage
 
 Use a voice command like "kneeboard 10 forward" to skip kneeboard chapters.
